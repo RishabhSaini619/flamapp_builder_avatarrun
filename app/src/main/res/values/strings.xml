@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Avatarrun_Creator</string>
-    <string name="avatarrun">Avatarrun!</string>
+    <string name="app_name">Avatar Demo</string>
+    <string name="title">Avatar Demo!</string>
     <string name="rpm_btn_title">RPM</string>
     <string name="flam_btn_title">Flam</string>
+    <string name="flam_btn">flam btm</string>
+    <string name="rpm_btn">rpm btn</string>
 </resources>

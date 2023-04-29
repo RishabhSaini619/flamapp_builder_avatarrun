@@ -4,49 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/avatarrun"
-        app:layout_constraintBottom_toTopOf="@id/btn_layout"
+    <!--    flam-->
+    <!--    Card-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_flam"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@id/card_rpm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btn_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_bg_flam"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="top"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1"
+                android:src="@drawable/image_bg_flam" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_logo_flam"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="20dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@color/black"
+                app:layout_constraintVertical_bias="0.9">
+
+                <ImageView
+                    android:id="@+id/image_logo_flam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_logo_flam"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <ImageButton
+                android:id="@+id/button_flam"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:text="@string/flam_btn_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.975"
+                android:src="@drawable/btn"
+                android:contentDescription="@string/flam_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--    RPM-->
+    <!--    Card-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_rpm"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title">
+        app:layout_constraintTop_toBottomOf="@id/card_flam">
 
-        <Button
-            android:id="@+id/flam_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flam_btn_title"
-            app:layout_constraintBottom_toTopOf="@id/rpm_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/rpm_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rpm_btn_title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/flam_button" />
+            <ImageView
+                android:id="@+id/image_bg_rpm"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1"
+                android:src="@drawable/image_bg_rpm" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_logo_rpm"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="20dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@color/black"
+                app:layout_constraintVertical_bias="0.9">
 
+                <ImageView
+                    android:id="@+id/image_logo_rpm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_logo_rpm" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageButton
+                android:id="@+id/button_rpm"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:text="@string/flam_btn_title"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.975"
+                android:src="@drawable/btn"
+                android:contentDescription="@string/rpm_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

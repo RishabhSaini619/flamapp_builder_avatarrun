@@ -21,6 +21,7 @@ class WebViewActivity : AppCompatActivity() {
 
             webView.apply {
                 loadUrl(url.toString())
+                webViewClient = WebViewClient()
                 settings.javaScriptEnabled = true
                 settings.allowFileAccess = true
                 settings.databaseEnabled = true
